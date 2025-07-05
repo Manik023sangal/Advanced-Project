@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sports Buddy</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Sports Buddy</h1>
+
+  <div class="auth-container">
+    <h2>Register</h2>
+    <input type="email" id="registerEmail" placeholder="Email">
+    <input type="password" id="registerPassword" placeholder="Password">
+    <button onclick="register()">Register</button>
+
+
+    <h2>Login</h2>
+    <input type="email" id="loginEmail" placeholder="Enter your email" required>
+    <input type="password" id="loginPassword" placeholder="Password">
+    <button onclick="login()">Login</button>
+
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <div class="event-container">
+    <h2>Add Sports Event</h2>
+    <input type="text" id="eventName" placeholder="Event Name">
+    <input type="text" id="eventCity" placeholder="City">
+    <input type="text" id="eventCategory" placeholder="Category">
+    <input type="text" id="eventTime" placeholder="Time">
+    <button onclick="addEvent()">Add Event</button>
+  </div>
+
+  <h2>Events List</h2>
+  <ul id="eventsList"></ul>
+
+  <script type="module" src="firebase.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
